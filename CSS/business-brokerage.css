@@ -1,0 +1,195 @@
+/* .main-content {
+	text-align: center;
+	padding: 20px;
+}
+.main-content h1 {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 4.5rem;
+	margin: 0;
+	color: #ffffff;
+} */
+
+.training {
+  min-height: 100vh;
+  color: #F3A712;
+  background: #000; /* keep text readable */
+  padding: 2rem;
+}
+
+.training .training-heading {
+  font-size: 48px;
+  text-align: center;
+  color: #fff;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.training-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.training .image {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.training .image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 1.5rem 1.5rem #fff;
+  border-radius: 0.5rem;
+}
+
+.training .info {
+  flex: 1 1 400px;
+  padding: 1rem;
+}
+
+.training .info h2 {
+  color: #F3A712;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.training .info p {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (min-width: 992px) {
+  .training-heading {
+    font-size: 4rem;
+  }
+
+  .training .info h2 {
+    font-size: 3rem;
+  }
+
+  .training .info p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .training-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .training .info h2 {
+    margin-top: 1rem;
+  }
+}
+
+
+.course .box-container {
+	width: 90%;
+	max-width: 1200px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.course .box-container .box {
+	height: 18rem;
+	text-align: center;
+	box-shadow: 0.3rem 0.3rem 0.1rem #F3A712,
+				0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+	border-radius: 0.5rem;
+	background: #fff;
+	padding: 1rem;
+	transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.course .box-container .box:hover{
+	transform: scale(1.05) translateY(-5px);
+}
+
+.course .box-container .box h3{
+	font-size: 18px;
+	color: #F3A712;
+}
+
+.course .box-container .box p{
+	color: #444;
+}
+
+.content-about{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+	margin-top: -100px;
+	padding-bottom: 8rem;
+	text-align: center;
+}
+
+.content-about p{
+	font-size: 1.5rem;
+	color: #F3A712;
+	padding: 3rem 3rem;
+	line-height: 1.2; 
+	margin-top: 150px;
+}
+
+.content-about .btn-about{
+	width: 18rem;
+	position: relative;
+	height: 3.5em;
+	border: 3px ridge #F3A712;
+	outline: none;
+	background-color: transparent;
+	color: white;
+	transition: 1s;
+	border-radius: 0.3em;
+	font-size: 26px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.btn-about::after {
+	content: "";
+	position: absolute;
+	top: -10px;
+	left: 3%;
+	width: 95%;
+	height: 40%;
+	transition: 0.5s;
+	transform-origin: center;
+}
+
+.btn-about::before {
+	content: "";
+	transform-origin: center;
+	position: absolute;
+	top: 80%;
+	left: 3%;
+	width: 95%;
+	height: 40%;
+	transition: 0.5s;
+}
+
+.btn-about:hover::before, button:hover::after {
+	transform: scale(0)
+}
+
+.btn-about:hover {
+	box-shadow: inset 0px 0px 25px #F3A712;
+}

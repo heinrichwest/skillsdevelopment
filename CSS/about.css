@@ -1,0 +1,444 @@
+.about .row{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* margin-top: -70px; */
+}
+
+.about .row .image{
+    flex:  1 1 40rem;
+    padding: 2rem;
+}
+
+.about .row .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 5px solid #F3A712;
+    border-radius: 1rem;
+}
+
+.about .row .content{
+    flex:  1 1 40rem;
+    padding: 2rem;
+}
+
+.about .row .content h3 {
+  color: #F3A712;
+  font-size: 2.5rem;   /* slightly smaller for balance */
+  font-weight: 600;    /* makes heading stand out */
+  margin-bottom: 1rem; /* spacing below heading */
+  line-height: 1.3; 
+  font-weight: 800;   /* improves readability */
+}
+
+.about .row .content p {
+  color: #fff;
+  font-size: 1.3rem;   /* more standard for body text */
+  padding: 0.5rem 0;   /* reduced padding for tighter layout */
+  line-height: 1.6;    /* better readability */
+  max-width: 700px;    /* keeps paragraphs narrow and readable */
+}
+
+.service{
+    margin-top: -100px;
+    text-align: center;
+}
+
+.service .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service .box-container .box{
+    height: 16rem;
+    width: 16rem;
+    margin: 1rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.service .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.service .box-container .box .info{
+    height: 95%;
+    width: 95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: #F3A712;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    border-radius: 1rem;
+}
+
+.service .box-container .box:hover .info{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.service .box-container .box .info h3{
+    font-size: 1.5rem;
+}
+
+.service .box-container .box .info p{
+    font-size: 1.3rem;
+    margin-top: -10px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 56px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Button */
+button {
+  background: #F3A712;
+  border: none;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  width: 100%;
+  height: 4rem;
+  cursor: pointer;
+  transform: skew(-0deg);
+  border-radius: 0.5rem;
+}
+
+span {
+  display: inline-block;
+  transform: skew(-0deg);
+  font-size: larger;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  left: 0;
+  background: rgb(20, 20, 20);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+  border-radius: 0.5rem;
+}
+
+button:hover {
+  color: #fff;
+}
+
+button:hover::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+/* Cards layout */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards__item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards__item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards__item {
+    width: 33.3333%;
+  }
+}
+
+/* Card */
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.card:hover .card__image {
+  filter: contrast(100%);
+}
+
+/* Card content */
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* Card image */
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(.43, .41, .22, .91);
+}
+
+.card__image::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+@media (min-width: 40rem) {
+  .card__image::before {
+    padding-top: 66.6%; /* 3:2 aspect ratio */
+  }
+}
+
+/* Example background images */
+.card__image--business {
+  background-image: url(../dummy/Business-Brokerage-for-Skills-Development-Specialists.png);
+}
+
+.card__image--training {
+  background-image: url(../dummy/Training-Certification.png);
+}
+
+.card__image--services {
+  background-image: url(../dummy/Accreditation-Services.png);
+}
+
+
+/* Card text */
+.card__title {
+  color: #333333; /* replaced @gray-dark */
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+/* Card with Icons */
+.creative-cards{
+    padding: 120px 0;
+    position: relative;
+}
+.creative-cards .container {
+    max-width: 1320px;
+    width: 100%;
+    padding-right: .75rem;
+    padding-left: .75rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -70px;
+}
+.creative-cards .container .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.creative-cards .container .row .card-column {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+    text-align: center;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.card-details {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    transition: .3s ease-in-out;
+}
+.card-details:before {
+    content: "";
+    width: 190px;
+    height: 380px;
+    background: #f7f6f2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) skew(-20deg, 0deg);
+    z-index: -1;
+    transition: .3s ease-in-out;
+}
+.card-details:hover:before{
+    background-color: #F3A712;
+}
+.card-icons {
+    width: 140px;
+    height: 150px;
+    position: relative;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-icons:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid;
+    width: 100%;
+    height: 100%;
+    transform: skew(-20deg, 0deg);
+    background: #fff;
+    border-color: #F3A712;
+    transition: .3s ease-in-out;
+}
+.card-details:hover .card-icons:before{
+    background-color: #F3A712;
+}
+.card-icons img{
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.card-details h3{
+    margin-bottom: 15px;
+    margin-top: 50px;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 1.2;
+}
+.card-details h3 a{
+  color: #fff;
+  text-decoration: none;
+}
+.card-details p{
+    font-size: 20px;
+    line-height: 30px;
+    color: #F3A712;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+/* ============= Responsive Ipad ==================== */
+@media (max-width: 992px) {
+ .creative-cards .container .row .card-column {
+    flex: 0 0 auto;
+    width: 50%;
+    margin-bottom: 40px;
+}
+}
+
+/* ============= Responsive Iphone ==================== */
+@media (max-width: 480px) {
+ .creative-cards .container .row .card-column {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.card-details{
+    width: 100%;
+}
+.read-more-btn{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+}
+}
+
+.content-about{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  margin-top: -100px;
+  padding-bottom: 8rem;
+  text-align: center;
+}
+
+.content-about p{
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 1rem 1rem;
+  line-height: 1.2; 
+}
+
+.content-about .btn-about{
+  width: 18rem;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #F3A712;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-about::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+.btn-about::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #212121;
+  transition: 0.5s;
+}
+
+.btn-about:hover::before, button:hover::after {
+  transform: scale(0)
+}
+
+.btn-about:hover {
+  box-shadow: inset 0px 0px 25px #F3A712;
+}
+
+/* ====================== Buy Me A Coffee =============================== */

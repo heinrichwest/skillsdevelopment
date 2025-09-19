@@ -1,0 +1,27 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build Artifacts
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Dependency directories
+node_modules/
+vendor/
+
+# Compiled CSS (if using preprocessors)
+*.css.map
+
+# Specific to this project
+dummy/
+Structure.xlsx
