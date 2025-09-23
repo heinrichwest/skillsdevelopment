@@ -1753,6 +1753,7 @@ body {
   text-decoration: none; }
   /* line 21, sass/layout/_header.scss */
   #branding img {
+    width: 80px;
     display: block; }
   /* line 22, sass/layout/_header.scss */
   #branding .site-description {
