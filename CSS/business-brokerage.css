@@ -123,6 +123,7 @@
 }
 
 .course .box-container .box h3{
+	margin-top: -5px;
 	font-size: 18px;
 	color: #F3A712;
 }
