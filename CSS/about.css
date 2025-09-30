@@ -228,15 +228,15 @@ button:hover::before {
 
 /* Example background images */
 .card__image--business {
-  background-image: url(../dummy/Business-Brokerage-for-Skills-Development-Specialists.png);
+  background-image: url(../Images/Business-Brokerage-for-Skills-Development-Specialists.png);
 }
 
 .card__image--training {
-  background-image: url(../dummy/Training-Certification.png);
+  background-image: url(../Images/Training-Certification.png);
 }
 
 .card__image--services {
-  background-image: url(../dummy/Accreditation-Services.png);
+  background-image: url(../Images/Accreditation-Services.png);
 }
 
 
